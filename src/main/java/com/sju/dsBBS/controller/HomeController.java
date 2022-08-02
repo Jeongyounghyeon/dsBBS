@@ -1,4 +1,4 @@
-package com.sju.dsBBS;
+package com.sju.dsBBS.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

@@ -27,6 +27,11 @@
 
 <body id="page-top">
 
+    <script>
+        let msg="${msg}";
+        if(msg=="SAVE_OK") alert("회원가입 성공");
+    </script>
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -74,7 +79,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">자유 게시판:</h6>
                         <a class="collapse-item" href="login.html">모두 함께 소통</a>
-                        <a class="collapse-item" href="<c:url value='/register/add'/>">홍보 게시판</a>
+                        <a class="collapse-item" href="register.html">홍보 게시판</a>
                         <a class="collapse-item" href="forgot-password.html">장터 게시판</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">비밀 게시판:</h6>
@@ -94,7 +99,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
                         <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="<c:url value='/register/add'/>">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
