@@ -19,6 +19,23 @@ public class UserServiceImpl implements UserService{
     }
 
     @Transactional(rollbackFor = Exception.class)
+    public UserDto login(String id, String pwd) throws Exception {
+        UserDto userDto = null;
+        try {
+            userDto = userDao.select(id);
+
+            // password가 일치하지 않으면 "Incorrect pwd" 예외 발생
+            if(userDto.getPwd().equals(pwd)==false)
+                throw new Exception("Incorrect pwd");
+
+            return userDao.select(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception("LOG_ERR");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
     public int remove(String id, String pwd) throws Exception {
         return userDao.delete(id, pwd);
     }

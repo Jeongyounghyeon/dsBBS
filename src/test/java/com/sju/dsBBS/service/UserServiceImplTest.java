@@ -39,6 +39,24 @@ public class UserServiceImplTest {
     }
 
     @Test
+    public void loginTest() throws Exception {
+        userDao.deleteAll("18011742");
+        UserDto userDto = new UserDto("18011111", "990101", "홍길동", "학생","aaa@aaa.com");
+        assertTrue(userDao.insert(userDto)==1);
+        System.out.println("userService.login(\"18011111\",\"991101\") = " + userService.login("18011111","990101"));
+
+        userDto = new UserDto("18011112", "990102", "홍길덩", "교수","bbb@bbb.com");
+        assertTrue(userDao.insert(userDto)==1);
+        System.out.println("userService.login(\"18011112\",\"990102\") = " + userService.login("18011112","990102"));
+
+        userDto = new UserDto("18011113", "990103", "test_name","학생","abc@abc.com");
+        assertTrue(userDao.insert(userDto)==1);
+//        System.out.println("userService.login(\"18011113\", \"990112\") = " + userService.login("18011113", "990112"));       // 일부러 예외 발생
+
+        assertTrue(userDao.deleteAll("18011742")==3);
+    }
+
+    @Test
     public void removeTest() throws Exception {
         userDao.deleteAll("18011742");
         UserDto userDto = new UserDto("18011111", "990101", "홍길동", "학생","aaa@aaa.com");

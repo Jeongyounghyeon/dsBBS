@@ -18,8 +18,6 @@
 
         @PostMapping("/save")
         public String save(UserDto userdto, Model m, RedirectAttributes rattr) throws Exception {
-            System.out.println("userdto = " + userdto);
-
             try {                           // exception이 발생하지 않으면, userdto 데이터 저장 후 index page로 이동
                 userService.register(userdto);
 

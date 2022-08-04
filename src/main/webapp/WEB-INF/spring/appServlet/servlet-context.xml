@@ -23,6 +23,7 @@
 	
 	<context:component-scan base-package="com.sju.dsBBS" />
 
+	<view-controller path="/login/login" view-name="login"/>
 	<view-controller path="/register/add" view-name="register"/>
 
 </beans:beans>

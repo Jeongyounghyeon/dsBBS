@@ -130,7 +130,5 @@ public class UserDaoImplTest {
                     UserDto userDto = new UserDto("18011"+i+j+k, "990101", "홍길동", "학생","aaa@aaa.com");
                     assertTrue(userDao.insert(userDto)==1);
                 }
-
-        userDao.deleteAll("18011742");
     }
 }

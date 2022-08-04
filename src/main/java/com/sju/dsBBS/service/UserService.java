@@ -10,6 +10,9 @@ public interface UserService {
     int register(UserDto userDto) throws Exception;
 
     @Transactional(rollbackFor = Exception.class)
+    UserDto login(String id, String pwd) throws Exception;
+
+    @Transactional(rollbackFor = Exception.class)
     int remove(String id, String pwd) throws Exception;
 
     @Transactional(rollbackFor = Exception.class)

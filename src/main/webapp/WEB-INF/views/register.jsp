@@ -17,13 +17,13 @@
     <title>SB Admin 2 - Register</title>
 
     <!-- Custom fonts for this template-->
-    <link href="/dsBBS/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/dsBBS/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -79,20 +79,20 @@
                                 <button class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </button>
-                                <hr>
-                                <a href="index.jsp" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
-                                </a>
-                                <a href="index.jsp" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
+<%--                                <hr>--%>
+<%--                                <a href="index.jsp" class="btn btn-google btn-user btn-block">--%>
+<%--                                    <i class="fab fa-google fa-fw"></i> Register with Google--%>
+<%--                                </a>--%>
+<%--                                <a href="index.jsp" class="btn btn-facebook btn-user btn-block">--%>
+<%--                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook--%>
+<%--                                </a>--%>
                             </form>
                             <hr>
                             <div class="text-center">
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="login.jsp">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -135,14 +135,14 @@
     </script>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="/dsBBS/vendor/jquery/jquery.min.js"></script>
-    <script src="/dsBBS/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor/jquery/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="/dsBBS/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="/dsBBS/js/sb-admin-2.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/sb-admin-2.min.js"></script>
 
     <style>
         #msg {

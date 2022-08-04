@@ -7,9 +7,9 @@
   <title>Insert title here</title>
 </head>
 <body>
-<script>
-  alert("회원가입 성공");
-</script>
+  <script>
+    alert("회원가입 성공");
+  </script>
 
 <h1>id=${param.id}</h1>
 <h1>pwd=${param.pwd}</h1>
