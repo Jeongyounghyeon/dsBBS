@@ -20,10 +20,16 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
+
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+				<beans:bean id="remeberInterceptor" class="com.sju.dsBBS.interceptor.RemeberInterceptor"/>
+		</interceptor>
+	</interceptors>
+
 	<context:component-scan base-package="com.sju.dsBBS" />
 
-	<view-controller path="/login/login" view-name="login"/>
 	<view-controller path="/register/add" view-name="register"/>
 
 </beans:beans>

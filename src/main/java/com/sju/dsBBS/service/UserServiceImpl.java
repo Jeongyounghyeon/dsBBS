@@ -44,4 +44,8 @@ public class UserServiceImpl implements UserService{
     public int removeAll(String id) throws Exception {
         return userDao.deleteAll(id);
     }
+
+    public UserDto select(String id) throws Exception {
+        return userDao.select(id);
+    }
 }

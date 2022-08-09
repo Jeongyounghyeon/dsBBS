@@ -96,4 +96,14 @@ public class UserServiceImplTest {
         assertTrue(userDao.count()==2);
         assertTrue(userService.removeAll("18011742")==2);
     }
+
+    @Test
+    public void selectTest() throws Exception {
+        userDao.deleteAll("18011742");
+        UserDto userDto = new UserDto("18011111", "990101", "홍길동", "학생","aaa@aaa.com");
+        assertTrue(userDao.insert(userDto)==1);
+        System.out.println("userService.select(\"1801111\") = " + userService.select("1801111"));
+
+        userDao.deleteAll("18011742");
+    }
 }

@@ -17,4 +17,6 @@ public interface UserService {
 
     @Transactional(rollbackFor = Exception.class)
     int removeAll(String id) throws Exception;
+
+    UserDto select(String id) throws Exception;
 }

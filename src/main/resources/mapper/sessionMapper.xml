@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sju.dsBBS.dao.SessionMapper">
+
+    <select id="select" parameterType="String" resultType="SessionDto">
+        select sessionId, userId, sessionLimit
+        from session
+        where sessionId=#{sessionId}
+    </select>
+
+    <insert id="insert" parameterType="SessionDto">
+        insert into session
+            (userId, sessionId, sessionLimit)
+        values
+            (#{userId}, #{sessionId}, #{sessionLimit})
+    </insert>
+
+    <delete id="delete" parameterType="String">
+        delete from session
+        where sessionId=#{sessionId}
+    </delete>
+
+    <update id="update" parameterType="map">
+        update session
+        set sessionLimit=#{sessionLimit}
+        where sessionId=#{sessionId}
+    </update>
+
+    <delete id="deleteAll">
+        delete from session
+    </delete>
+
+
+    <select id="count" resultType="int">
+        select count(*) from session
+    </select>
+
+</mapper>
